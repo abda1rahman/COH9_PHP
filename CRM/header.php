@@ -1,4 +1,4 @@
-
+<?PHP session_start(); ?>
 <?php include './functions.php' ?>
 
 <!doctype html>
@@ -21,6 +21,9 @@
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="./">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="./create.php">Create Customer</a>
         </li>
       </ul>
     </div>

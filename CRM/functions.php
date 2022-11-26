@@ -2,7 +2,7 @@
 
 function connect()
 {
-  $servername = "127.0.0.1";
+$servername = "127.0.0.1";
 $username = "root";
 $password = "";
 $database = "coh9_php";
@@ -53,3 +53,12 @@ return $customers;
     }
     return $customer;
   }
+
+  function create_customer($firstname, $lastname, $email, $phone, $sales)
+{
+    die('asdf');
+    $sales = !empty($sales) ? (int) $sales : 0;
+    $sql = "INSERT INTO Customers (firstname, lastname, email, phone, sales) Value('$firstname', '$lastname', '$email', '$phone', $sales)";
+    $result = mysqli_query(connect(), $sql);
+    die;
+}

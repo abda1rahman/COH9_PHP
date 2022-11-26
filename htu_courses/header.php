@@ -1,6 +1,14 @@
 <?php
 session_start();
 include './includes/env.php';
+
+// first solution
+// $current_file = explode('/',$_SERVER['SCRIPT_FILENAME']);
+// $current_file_name = $current_file[array_key_last($current_file)];
+
+if(!isset($_SESSION['user']) && !strpos($_SERVER['SCRIPT_FILENAME'], 'index.php'))
+  header("Location: ./")
+
 ?>
 
 <!doctype html>
@@ -51,13 +59,18 @@ include './includes/env.php';
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <?php if ( isset($_SESSION['user'])) : ?>
+          <?php if ( isset($_SESSION['user'])) : 
+           $title_list = json_decode(file_get_contents('./api_data/menu.json'));
+           ?>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <?php foreach ($title_list as $title_nav) : ?>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./">Home</a>
+              <a class="nav-link <?= strpos($_SERVER['SCRIPT_FILENAME'], $title_nav->script_name) ? "active" : null ?>" aria-current="page" href="<?= $title_nav->script_name ?>"><?= $title_nav->title ?></a>
             </li>
+            <?php endforeach; ?>
           </ul>
         <div >
+          <span class="me-3"><?= $_SESSION['user']['display_name'] ?></span>
           <a class="btn btn-danger" href="./auth/logout.php">Logout</a>
         </div>
         <?php endif ?>
