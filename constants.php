@@ -19,6 +19,10 @@ array(
   'title'       => "MySQL - Customers",
   'description' => "Simple CRM",
   'link'        => "./CRM"
+),
+array(
+  'title'       => "Htu_Courses",
+  'description' => "How to handle course in PHP.",
+  'link'        => "./htu_courses"
 )
-
 ));

@@ -82,7 +82,7 @@ if(!isset($_SESSION['user']) && !strpos($_SERVER['SCRIPT_FILENAME'], 'index.php'
       <div id="htu-hero" class="w-25 h-50 d-flex flex-column justify-content-center align-items-center">
         <p id="htu-slogen"><?= SLOGAN ?></p>
         <h1 id="htu-hp-title"><?= TITLE ?></h1>
-        <form class="d-flex w-75" role="search">
+        <form class="d-flex w-75" role="search" method="get" action="./search.php">
         <input class="form-control me-2" type="search" placeholder="Search" name="s" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
