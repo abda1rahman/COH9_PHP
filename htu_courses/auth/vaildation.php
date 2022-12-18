@@ -6,7 +6,6 @@
   if ($_SERVER['REQUEST_METHOD'] != "POST" && empty($_POST)) // check if the form was submitted using POST method and is not empty
       die("You are a bad guy and you are trying to access this code directly!");
 
-  $email = isset($_POST['email']) ? $_POST['email'] : null;
   $password = isset($_POST['password']) ? $_POST['password'] : null;
 
   $error = false;

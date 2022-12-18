@@ -90,3 +90,4 @@ if(!isset($_SESSION['user']) && !strpos($_SERVER['SCRIPT_FILENAME'], 'index.php'
     </div>
     <?php endif ?>
   </header>
+  

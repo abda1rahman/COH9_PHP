@@ -24,5 +24,25 @@ array(
   'title'       => "Htu_Courses",
   'description' => "How to handle course in PHP.",
   'link'        => "./htu_courses"
+),
+array(
+  'title'       => "CV",
+  'description' => "Create CV appliction.",
+  'link'        => "./cv"
+),
+array(
+  'title'       => "Ticketing System",
+  'description' => "Simple PHP (ticketing system that manage seats reservation)",
+  'link'        => "./ticketing_system"
+),
+array(
+  'title'       => "OOP Basics",
+  'description' => "Demonstration of OOP concepts",
+  'link'        => "./oop_basics"
+),
+array(
+  'title'       => "Students Management System",
+  'description' => "A simple students managment system using OOp",
+  'link'        => "./sm_oop"
 )
 ));

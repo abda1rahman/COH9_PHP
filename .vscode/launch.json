@@ -4,6 +4,15 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+  php
+  {
+    "name": "Xdebug Cloud",
+    "type": "php",
+    "request": "launch",
+    "xdebugCloudToken": ""
+  },
+    php
+    
   {
     "name": "Launch current script in console",
     "type": "php",

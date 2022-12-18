@@ -1,0 +1,13 @@
+.ts-seat {
+  height: 200px;
+  color:#fff;
+  font-size:4rem;
+}
+
+.available-seat {
+  background-color: green;
+}
+
+.unavailable-seat {
+  background-color:red;
+}
